@@ -10,6 +10,18 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
     <style>
+        h1{
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+    
+        #mainbody{
+            background-color: rgb(228, 204, 204);
+        }
+        #body{
+            text-align: center;
+            /* background-color: red; */
+        }
         #exp{
             background-color: rgb(47, 161, 51);
             color: antiquewhite;
@@ -17,7 +29,7 @@
         }
         #del{
             border-radius: 5px ;
-            background-color: rgb(235, 78, 78);
+            background-color: rgb(245, 135, 135);
             padding: 3px;
             margin-top: 5px;
             margin-bottom: 5px;
@@ -31,33 +43,43 @@
         .newexp{
             font-weight: bolder;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            background-color: antiquewhite;
+            background-color: rgb(244, 237, 227);
+            padding-left: 10px;
+        }
+        .font{
+            font-weight: bold;
+        }
+        .expclass{
+            margin-top: 5PX;
+        }
+        .btn{
+         margin-bottom: 8px;
         }
     </style>
 </head>
 <body>
     <h1 id="exp">EXPENSE TRACKER(Monthly Expenses)</h1>
-<div>
+<div id="mainbody">
     <form action="#" onsubmit="adding(event)">
     <div id="body">
-        <label >DESCRIPTION:-</label>
-        <input type="text" name="desc" id="desctag">
-        <label >CATEGORY:-</label>
-        <select name="categ" id="categtag">
+        <label class="font">DESCRIPTION:-</label>
+        <input type="text" name="desc" id="desctag" class="expclass">
+        <label class="font">CATEGORY:-</label>
+        <select name="categ" id="categtag" class="expclass">
             <option value="home" >home</option>
             <option value="groceries">groceries</option>
             <option value="investment">investment</option>
             <option value="jkhgikug">home</option>
         </select>
-        <label >AMOUNT:-</label>
-        <input type="text" name="amt" id="amttag">
+        <label class="font">AMOUNT:-</label>
+        <input type="text" name="amt" id="amttag" class="expclass">
         <div class="text-center mt-2 mb-3">
-            <button type="reset" class="btn btn-danger btn-rounded">reset expenses</button>
-            <button type="submit" class="btn btn-success">add expenses</button></div>
+            <button type="reset" class="btn btn-danger btn-rounded">RESET</button>
+            <button type="submit" class="btn btn-success">ADD EXPENSES</button></div>
     </div>
-    <ul id="listOfitems"></ul>
-    </form>
+</form>
 </div>
+<ul id="listOfitems"></ul>
 <script>
     function adding(event){
         event.preventDefault()
